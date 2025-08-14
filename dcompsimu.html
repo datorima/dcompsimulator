@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/datorima/dcompsimulator/refs/heads/main/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCOMP SIMULATOR</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(https://www.ufs.br/uploads/body_image/gist/150397/_mg_5654a_44601689541_o.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+           
+        }
+
+        .game-container {
+            width: 90%;
+            max-width: 900px;
+            height: 90%;
+            max-height: 700px;
+            background: url('https://www.ufs.br/uploads/body_image/gist/60209/predio_foto_02_para_fotolegenda.jpg') no-repeat center center;
+            background-size: cover;
+            border: 5px solid #dcdcdc;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .jubilometro-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            height: 25px;
+            background-color: #fff;
+            border: 2px solid #555;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .jubilometro-fill {
+            width: 100%; /* Comeca com 100% de progresso */
+            height: 100%;
+            background-color: #3803f7;
+            transition: width 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .dialogue-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-top: 3px solid #dcdcdc;
+            padding: 20px;
+            min-height: 120px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .character-portrait {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+            background-image: url(https://raw.githubusercontent.com/datorima/dcompsimulator/refs/heads/main/prof.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dialogue-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dialogue-text {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin: 0 0 15px 0;
+            text-align: left;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .choice-button {
+            flex-grow: 1;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .choice-button:hover {
+            background-color: #0056b3;
+        }
+
+        .character-name {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <div class="jubilometro-bar">
+            <div class="jubilometro-fill">100% Jubilômetro</div>
+        </div>
+
+        <div class="dialogue-box">
+            <div class="character-portrait" style="background-image: url('https://raw.githubusercontent.com/datorima/dcompsimulator/refs/heads/main/prof.png');"></div>
+            <div class="dialogue-content">
+                <span class="character-name">Prof. Michel</span>
+                <p class="dialogue-text">"Bem-vindo ao DCOMP! Para iniciar o primeiro episódio, você deve escolher uma das quatro rotas. Cada rota levará a um caminho diferente de conhecimento."</p>
+                <div class="choices">
+                    <button class="choice-button">Rota de IA</button>
+                    <button class="choice-button">Rota de Software</button>
+                    <button class="choice-button">Rota de Hardware</button>
+                    <button class="choice-button">Rota de Dados</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
