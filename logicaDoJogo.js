@@ -87,3 +87,13 @@ const cenas = [
     ]
   }
 ]
+ // Criamos uma função que pega exclusivamente o arquivo do personagem e emoção desejada para renderizar o que é esperado dependendo - 
+    //- da resposta dada. que localiza na lista de personagens qual a emoção que ele vai ter a uma determinada interação. 
+    // Exemplo: se o personagem na cena 1 escolhe a reposta A e ela não for do agrado do personagem, então ele irá esboçar -
+    //- uma reação de raiva. E isso influe diretamente no jubilômetro. 
+const renderizarPersongem = (nome,emocao) =>{
+    const indentificar = personagens.filter((personagem) => personagem.nome === nome)
+    const IndentiReacao = indentificar[0].avatar[emocao]
+    return IndentiReacao
+}
+
